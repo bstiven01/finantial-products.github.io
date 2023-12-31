@@ -1,0 +1,41 @@
+<article>
+
+    <section class="container">
+
+        <header>
+            <input type="text" placeholder="Search..." [(ngModel)]="searchText" class="input-search">
+
+            <button routerLink="form" class="button-primary">Agregar</button>
+        </header>
+
+        <section class="container-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Logo</th>
+                        <th>Nombre del producto</th>
+                        <th>Descripción</th>
+                        <th>Fecha de liberación</th>
+                        <th>Fecha de reestructuración</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of productList | searchFilter: searchText">
+                        <td><app-logo [text]="item.logo"></app-logo></td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.releaseDate}}</td>
+                        <td>{{item.reviewDate}}</td>
+                        <td><app-options [id]="item.id"></app-options></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <span class="count"> {{(productList | searchFilter: searchText ).length }} Resultados </span>
+
+        </section>
+
+    </section>
+    
+</article>

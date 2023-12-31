@@ -1,0 +1,58 @@
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container {
+    width: 90%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-search {
+    width: 200px;
+    height: 35px;
+}
+
+.container-table {
+    height: max-content;
+    color: black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    padding: 2rem 2rem;
+    text-align: justify;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    height: 60px;
+    background-color: rgb(242, 246, 251);
+}
+
+tbody tr {
+    height:65px;
+    border-top: 1px solid rgb(227, 221, 221);
+    border-bottom: 1px solid rgb(227, 221, 221);
+    
+}
+
+th, td {
+    padding: 1rem;
+}
+
+.count {
+    line-height: 60px;
+}
